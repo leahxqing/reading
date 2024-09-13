@@ -11,7 +11,7 @@ The mechanical properties of regression estimates (universal features of the pop
 - the sampling distribution of regression estimates
 
 ### Economic Relationships and the Conditional Expectation Function
-CEF (conditional expectation function): $$E[Y_i|X_i]$$ is a function of $$X_i$$, also a random variable
+CEF (conditional expectation function): $E[Y_i|X_i]$ is a function of $X_i$, also a random variable
 
 $$
 E[Y_i|X_i=x]=\int tf_y(t|X_i=x)dt
@@ -30,13 +30,13 @@ $$
 $$
 Y_i=E[Y_i|X_i]+\epsilon_i
 $$
-where $$ \epsilon_i $$ is mean-independent of $ X_i $, i.e., $ E[\epsilon_i|X_i]=0 $ and, therefore, $ \epsilon_i $ is uncorrelated with any function of $ X_i $
+where $ \epsilon_i $ is mean-independent of $ X_i $, i.e., $ E[\epsilon_i|X_i]=0 $ and, therefore, $ \epsilon_i $ is uncorrelated with any function of $ X_i $
 
-This theorem says that any random variable, $$Y_i$$ can be decomposed into a piece that's "explained by $X_i$", i.e., the CEF, and a piece left over which is orthogonal to (i.e., uncorrelated with) any function of $X_i$.
+This theorem says that any random variable, $Y_i$ can be decomposed into a piece that's "explained by $X_i$", i.e., the CEF, and a piece left over which is orthogonal to (i.e., uncorrelated with) any function of $X_i$.
 
 **Theorem 3.1.2 The CEF-Prediction Property**
 
-Let $$m(X_i)$$ be any function of $$X_i$$, the CEF solves
+Let $m(X_i)$ be any function of $X_i$, the CEF solves
 
 $$
 E[Y_i|X_i]=\mathop{\mathbf{argmin}}\limits_{m(X_i)}E[(Y_i-m(X_i))^2]
@@ -102,9 +102,9 @@ It is derived as a method of moments estimator.
 
 **The asymptotic distribution of $ \hat{\beta} $:**
 
-The first way using **Delta Method**, since $$\hat{\beta}$$ is a function of sample moments, and is therefore asymptotically Normally distributed. 
+The first way using **Delta Method**, since \hat{\beta}$ is a function of sample moments, and is therefore asymptotically Normally distributed. 
 
-An easier and more instructive derivation uses the **Slutsky and central limit theorems** shows that $$ \hat{\beta} $$ has an asymptotically Normal distribution, with probability limit $$ \beta $$, and covariance matrix 
+An easier and more instructive derivation uses the **Slutsky and central limit theorems** shows that $ \hat{\beta} $ has an asymptotically Normal distribution, with probability limit $ \beta $, and covariance matrix 
 
 $$
 E[X_iX_i']^{-1}E[X_iX_i'e_i^2]E[X_iX_i']^{-1}
@@ -135,7 +135,7 @@ A regression is causal when the CEF it approximates is causal.
 
 Conditional independence assumption (CIA), also called selection-on-observables because the covariates to be held are assumed to be known and observed.
 
-Consider the *education-income* example. Given the CIA, conditional-on-$$ X_i $$ comparisons of average earnings across schooling levels have a causal interpretation. 
+Consider the *education-income* example. Given the CIA, conditional-on- X_i $ comparisons of average earnings across schooling levels have a causal interpretation. 
 $$
 E[Y_i|X_i,C_i=1]-E[Y_i|X_i,C_i=0]=E[Y_{1i}-Y_{0i}|X_i]
 $$
@@ -147,13 +147,13 @@ The CIA in a more general setup becomes
 $$
 Y_{si}\amalg S_i|X_i
 $$
-Conditional on $$ X_i $$, the average causal effect of a one year increase in schooling is $ E[f_i(s)-f_i(s-1)|X_i] $, while the average casual effect of a 4-year increase in schooling is $ E[f_i(s)-E[f_i(s-4)]|X_i] $. Given CIA, conditional-on-$ X_i $ comparisons of average earnings across schooling levels have a causal interpretation.
+Conditional on $ X_i $, the average causal effect of a one year increase in schooling is $ E[f_i(s)-f_i(s-1)|X_i] $, while the average casual effect of a 4-year increase in schooling is $ E[f_i(s)-E[f_i(s-4)]|X_i] $. Given CIA, conditional-on-$ X_i $ comparisons of average earnings across schooling levels have a causal interpretation.
 $$
 E[Y_i|X_i,S_i=s]-E[Y_i|X_i,S_i=s-1]=E[f_i(s)-f_i(s-1)|X_i]
 $$
 The elimination of selection bias.
 
-Regression provides an easy-to-use empirical strategy that automatically turns the CIA into causal effects. Two routes can be traced from the CIA to regression, One assumes that $$ f_i(s) $$ is both linear in s and the same for everyone except for an additive error term, in which case linear regression is a natural tool to estimate the features of $$ f(s) $$. A more general but somewhat longer route recognizes that $$ f_i(s) $$ almost certainly differs for different people. and, moreover, need not be linear in s. Even so. allowing for random variation in $$ f_i(s) $$ across people, and for non-linearity for a given person, regression can be thought of as strategy for the estimation of a weighted average of the individual-specific difference, $$ f_i(s) - f_i(s - 1) $$. In fact, regression can be seen as a particular sort of matching estimator, capturing an average causal effect.
+Regression provides an easy-to-use empirical strategy that automatically turns the CIA into causal effects. Two routes can be traced from the CIA to regression, One assumes that $ f_i(s) $ is both linear in s and the same for everyone except for an additive error term, in which case linear regression is a natural tool to estimate the features of $ f(s) $. A more general but somewhat longer route recognizes that $ f_i(s) $ almost certainly differs for different people. and, moreover, need not be linear in s. Even so. allowing for random variation in $ f_i(s) $ across people, and for non-linearity for a given person, regression can be thought of as strategy for the estimation of a weighted average of the individual-specific difference, $ f_i(s) - f_i(s - 1) $. In fact, regression can be seen as a particular sort of matching estimator, capturing an average causal effect.
 
 The first route, a linear constant-effects causal model. Suppose that 
 $$
@@ -161,11 +161,11 @@ f_i(s)=\alpha+\rho s+\eta_i
 $$
 The equation says that the linearity and the functional relationship of interest is the same for everyone.
 
-Suppose now the CIA holds given a vector if observed covariates, $$ X_i  $$. We decompose the random part of potential earnings, $$ \eta_i $$, into a linear function of observable characteristics, $$ X_i $$, and an error term, $$ v_i $$: 
+Suppose now the CIA holds given a vector if observed covariates, $ X_i  $. We decompose the random part of potential earnings, $ \eta_i $, into a linear function of observable characteristics, $ X_i $, and an error term, $ v_i $: 
 $$
 \eta_i=X_i'\gamma+v_i
 $$
-where $$ \gamma $$ is a vector of population regression coefficients that is assumed to satisfy $ E[\eta_i|X_i]=X_i'\gamma $
+where $ \gamma $ is a vector of population regression coefficients that is assumed to satisfy $ E[\eta_i|X_i]=X_i'\gamma $
 . Because $ \gamma $ is defined by the regression of $ \eta_i $ on $ X_i $, the residual $ v_i $ and $ X_i $ are uncorrelated by construction. Moreover, by virtue of the CIA, we have 
 $$
 E[f_i(s)|X_i,S_i]=E[f_i(s)|X_i]=\alpha+\rho s+E[\eta_i|X]=\alpha+\rho s+X_i'\gamma
@@ -174,7 +174,7 @@ Because mean-independence implies orthogonality, the residual in the linear caus
 $$
 Y_i=\alpha+\rho S_i+X_i'\gamma+v_i
 $$
-is uncorrelated with the regressors, $$ S_i $$ and $$ X_i $$, and the regression coefficient $$ \rho $$ is the causal effect of interest. It bears emphasizing once again that the key assumption here is that the observable characteristics, $$ X_i $$, are the only reason why $$ \eta_i $$ and $$ S_i $$ (equivalently, $$ f_i(s) $$ and $$ S_i $$) are correlated. The \textit{selection-on-observables assumption}.
+is uncorrelated with the regressors, $ S_i $ and $ X_i $, and the regression coefficient $ \rho $ is the causal effect of interest. It bears emphasizing once again that the key assumption here is that the observable characteristics, $ X_i $, are the only reason why $ \eta_i $ and $ S_i $ (equivalently, $ f_i(s) $ and $ S_i $) are correlated. The \textit{selection-on-observables assumption}.
 
 ### The Omitted Variables Bias Formula
 To paraphrase, the OVB formula says: *Short equals long plus the effect of omitted times the regression of omitted on included*
@@ -188,17 +188,17 @@ The essence of the bad control problem is a version of selection bias, albeit so
 
 A formal illustration of the bad control problem in the college/occupation example (the effects of a college degree on earnings that people can work in one of two occupations, while collar and blue collar. And the occupation is highly correlated with both education and pay, thus is better to look at the effect college on wages within an occupation).
 
-Let $$ W_i $$ be a dummy variable that denotes white collar workers and $$ Y_i $$ denote earnings. The realization of these variables is determined by college graduation status and potential outcomes that are indexed against $$ C_i $$. We have 
+Let $ W_i $ be a dummy variable that denotes white collar workers and $ Y_i $ denote earnings. The realization of these variables is determined by college graduation status and potential outcomes that are indexed against $ C_i $. We have 
 $$
     Y_i=C_iY_{1i}+(1-C_i)Y_{0i} \\
     W_i=C_iW_{1i}+(1-C_i)W_{0i} 
 $$
-where $$ C_i=1 $$ for college graduates and is zero otherwise. Assuming that $$ C_i $$ is randomly assigned, it is independent of all potential outcomes. Thus, the causal effect of $$ C_i $$ on either $$ Y_i $$ or $$ W_i $$ since independence gives:
+where $ C_i=1 $ for college graduates and is zero otherwise. Assuming that $ C_i $ is randomly assigned, it is independent of all potential outcomes. Thus, the causal effect of $ C_i $ on either $ Y_i $ or $ W_i $ since independence gives:
 $$
     E[Y_i|C_i=1]- E[Y_i|C_i=0]= E[Y_{1i}-Y_{0i}] \\
     E[W_i|C_i=1]- E[W_i|C_i=0]= E[W_{1i}-W_{0i}]
 $$
-Bad control means that a comparison of earnings conditional on $$ W_i $$ does not have a causal interpretation. 
+Bad control means that a comparison of earnings conditional on $ W_i $ does not have a causal interpretation. 
 $$
 E[Y_{1i}|W_{1i}=1]-E[Y_{0i}|W_{0i}=1] \\
 = E[Y_{1i}-Y_{0i}|W_{1i}=1]+E[Y_{0i}|W_{1i}=1]-E[Y_{0i}|W_{0i}=1]

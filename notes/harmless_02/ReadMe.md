@@ -7,7 +7,7 @@ An example: studying a poor elderly population that uses hospital emergency room
 
 By simply comparing the average health status by subtracting the mean health status of people go to hospital by the mean health status of people not go to hospital brings **selection bias**.
 
-More precisely, think the treatment as described as a binary random variable. $$D_i = {0,1}$$. The outcome of health status is denoted as $$Y_i$$. So for any individual there are two potential health variables.
+More precisely, think the treatment as described as a binary random variable. $D_i = {0,1}$. The outcome of health status is denoted as $Y_i$. So for any individual there are two potential health variables.
 
 $$
 potential\ outcome = \left\{\begin{matrix}
@@ -34,11 +34,7 @@ $$
 \end{align}
 $$
 
-The term 
-
-$$E[Y_{1i}|D_i=1]-E[Y_{0i}|D_i=1]=E[Y_{1i}-Y_{0i}|D_i=1]$$
-
-is the *average causal affect of hospitalization on those who were hospitalized*.
+The term $E[Y_{1i}|D_i=1]-E[Y_{0i}|D_i=1]=E[Y_{1i}-Y_{0i}|D_i=1]$ is the *average causal affect of hospitalization on those who were hospitalized*.
 
 The observed difference in health status however, adds to this causal effect a term called *selection bias*.
 
@@ -54,15 +50,15 @@ $$
 \end{align}
 $$
 
-The random assignment of $$D_i$$ eliminates the selection bias.
+The random assignment of $D_i$ eliminates the selection bias.
 
 ## Regression Analysis of Experiments
-Suppose the treatment effect is the same for everyone, say $$Y_{1i}-Y_{0i}=\rho$$, a constant. We can write the outcome as
+Suppose the treatment effect is the same for everyone, say $Y_{1i}-Y_{0i}=\rho$, a constant. We can write the outcome as
 
 $$
 Y_i = \mathop{\alpha}\limits_{=E(Y_{0i})} + \mathop{\rho}\limits_{=Y_{1i}-Y_{0i}} D_i +\mathop{\eta_i}\limits_{=Y_{0i}-E(Y_{0i})}
 $$
-where $$\eta_i$$ is the random part of $$Y_{0i}$$. Then
+where $\eta_i$ is the random part of $Y_{0i}$. Then
 
 $$
 \begin{align}
