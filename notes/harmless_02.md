@@ -1,14 +1,3 @@
----
-title: '2 THE EXPERIMENTAL IDEAL'
-date: 2023-09-24
-toc: true
-permalink: /posts/mostly_harmless_02/
-tags:
-  - Econometrics
-  - Book Reading
-  - Mostly Harmless
----
-
 This is the second chapter *The Experimental Ideal* from *Mostly Harmless Econometrics*. You can also refer to my wechat account's post [here](https://mp.weixin.qq.com/s/ntU-3PRQWR4LuT98777-ig).
 
 
