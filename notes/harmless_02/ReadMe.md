@@ -9,23 +9,23 @@ By simply comparing the average health status by subtracting the mean health sta
 
 More precisely, think the treatment as described as a binary random variable. $D_i = {0,1}$. The outcome of health status is denoted as $Y_i$. So for any individual there are two potential health variables.
 
-$$
-potential\ outcome = \left\{\begin{matrix}
+```math
+\text{potential outcome} = \left\{\begin{matrix}
 Y_{1i}  & if\ D_i = 1\\
 Y_{0i}  & if\ D_i = 0
 \end{matrix}\right.
-$$
+```
 
 The observed outcome $Y_i$, can be written in the terms of potential outcomes as 
 
-$$
+```math
 Y_i = \left\{ \begin{matrix}
     Y_{1i} &  if\ D_i = 1\\
     Y_{0i} &  if\ D_i = 0 
 \end{matrix}
 \right. 
 \\ =Y_{0i}+(Y_{1i}-Y_{0i})D_i
-$$
+```
 
 Thus, the initial comparison, the observed difference in average health is:
 
