@@ -1,4 +1,4 @@
-This is the second chapter *The Experimental Ideal* from *Mostly Harmless Econometrics*. You can also refer to my wechat account's post [here](https://mp.weixin.qq.com/s/ntU-3PRQWR4LuT98777-ig).
+This is the second chapter *The Experimental Ideal* from *Mostly Harmless Econometrics*. You can also refer to my wechat account's post [here](https://mp.weixin.qq.com/s/ntU-3PRQWR4LuT98777-ig). <font color=Brown>It's better to read this page in *Google* with the extension [`mathjax plugin for github`](https://chromewebstore.google.com/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima).</font>
 
 
 # The Experimental Ideal
@@ -29,12 +29,12 @@ Y_i = \left\{ \begin{matrix}
 
 Thus, the initial comparison, the observed difference in average health is:
 
-$$
+```latex
 \begin{align}
     \mathop{E[Y_i|D_i=1]-E[Y_i|D_i=0]}\limits_{\textcolor{blue}{Observed\ difference\ in\ average\ health}}=& \mathop{E[Y_{1i}|D_i=1]-E[Y_{0i}|D_i=1]}\limits_{\textcolor{blue}{average\ treatment\ effect\ on\ the\ treated}} \\ 
     &+\mathop{E[Y_{0i}|D_i=0]-E[Y_{0i}|D_i=0]}\limits_{\textcolor{blue}{selection\ bias}}
 \end{align}
-$$
+```
 
 The term $E[Y_{1i}|D_i=1]-E[Y_{0i}|D_i=1]=E[Y_{1i}-Y_{0i}|D_i=1]$ is the *average causal affect of hospitalization on those who were hospitalized*.
 

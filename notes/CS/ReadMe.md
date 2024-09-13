@@ -1,4 +1,4 @@
-Reading Note for *Introduction to Computational Science*.
+Reading Note for *Introduction to Computational Science*. <font color=Brown>It's better to read this page in *Google* with the extension [`mathjax plugin for github`](https://chromewebstore.google.com/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima).</font>
 
 ## Overfitting & Underfitting
 - Cross Validation

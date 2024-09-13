@@ -1,4 +1,4 @@
-This is the third chapter *Making Regression Make Sense* from *Mostly Harmless Econometrics*. You can also refer to my wechat account's post [here](https://mp.weixin.qq.com/s/0NsDNFkb6Y-MQvDDNy0E4A).
+This is the third chapter *Making Regression Make Sense* from *Mostly Harmless Econometrics*. You can also refer to my wechat account's post [here](https://mp.weixin.qq.com/s/0NsDNFkb6Y-MQvDDNy0E4A). <font color=Brown>It's better to read this page in *Google* with the extension [`mathjax plugin for github`](https://chromewebstore.google.com/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima).</font>
 
 
 # Making Regression Make Sense
