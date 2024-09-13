@@ -29,7 +29,7 @@ Y_i = \left\{ \begin{matrix}
 
 Thus, the initial comparison, the observed difference in average health is:
 
-```latex
+```math
 \begin{align}
     \mathop{E[Y_i|D_i=1]-E[Y_i|D_i=0]}\limits_{\textcolor{blue}{Observed\ difference\ in\ average\ health}}=& \mathop{E[Y_{1i}|D_i=1]-E[Y_{0i}|D_i=1]}\limits_{\textcolor{blue}{average\ treatment\ effect\ on\ the\ treated}} \\ 
     &+\mathop{E[Y_{0i}|D_i=0]-E[Y_{0i}|D_i=0]}\limits_{\textcolor{blue}{selection\ bias}}
