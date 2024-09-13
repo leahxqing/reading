@@ -9,20 +9,22 @@ By simply comparing the average health status by subtracting the mean health sta
 
 More precisely, think the treatment as described as a binary random variable. $$D_i = {0,1}$$. The outcome of health status is denoted as $$Y_i$$. So for any individual there are two potential health variables.
 
-$$potential\ outcome = \left\{\begin{matrix}
+$$
+potential\ outcome = \left\{\begin{matrix}
 Y_{1i}  & if\ D_i = 1\\
 Y_{0i}  & if\ D_i = 0
-\end{matrix}\right.$$
-
+\end{matrix}\right.
+$$
 The observed outcome $Y_i$, can be written in the terms of potential outcomes as 
 
-$$Y_i = \left\{ \begin{matrix}
+$$
+Y_i = \left\{ \begin{matrix}
     Y_{1i} &  if\ D_i = 1\\
     Y_{0i} &  if\ D_i = 0 
 \end{matrix}
 \right. 
-\\ =Y_{0i}+(Y_{1i}-Y_{0i})D_i$$
-
+\\ =Y_{0i}+(Y_{1i}-Y_{0i})D_i
+$$
 Thus, the initial comparison, the observed difference in average health is:
 
 $$
@@ -57,8 +59,9 @@ The random assignment of $$D_i$$ eliminates the selection bias.
 ## Regression Analysis of Experiments
 Suppose the treatment effect is the same for everyone, say $$Y_{1i}-Y_{0i}=\rho$$, a constant. We can write the outcome as
 
-$$Y_i = \mathop{\alpha}\limits_{=E(Y_{0i})} + \mathop{\rho}\limits_{=Y_{1i}-Y_{0i}} D_i +\mathop{\eta_i}\limits_{=Y_{0i}-E(Y_{0i})}$$
-
+$$
+Y_i = \mathop{\alpha}\limits_{=E(Y_{0i})} + \mathop{\rho}\limits_{=Y_{1i}-Y_{0i}} D_i +\mathop{\eta_i}\limits_{=Y_{0i}-E(Y_{0i})}
+$$
 where $$\eta_i$$ is the random part of $$Y_{0i}$$. Then
 
 $$
