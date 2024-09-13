@@ -33,7 +33,7 @@ $$
 Y_i=E[Y_i|X_i]+\epsilon_i
 $$
 
-where $ \epsilon_i $ is mean-independent of $ X_i $, i.e., $ E[\epsilon_i|X_i]=0 $ and, therefore, $ \epsilon_i $ is uncorrelated with any function of $ X_i $
+where $\epsilon_i$ is mean-independent of $X_i$, i.e., $E[\epsilon_i|X_i]=0$ and, therefore, $\epsilon_i$ is uncorrelated with any function of $X_i$
 
 This theorem says that any random variable, $Y_i$ can be decomposed into a piece that's "explained by $X_i$", i.e., the CEF, and a piece left over which is orthogonal to (i.e., uncorrelated with) any function of $X_i$.
 
@@ -44,7 +44,8 @@ Let $m(X_i)$ be any function of $X_i$, the CEF solves
 $$
 E[Y_i|X_i]=\mathop{\mathbf{argmin}}\limits_{m(X_i)}E[(Y_i-m(X_i))^2]
 $$
-so it is the MMSE (*Minimum Mean Square Error*) predictor of $ Y_i $ given $ X_i $
+
+so it is the MMSE (*Minimum Mean Square Error*) predictor of $Y_i$ given $X_i$
 
 **Theorem 3.1.3 The ANOVA Theorem**
 
@@ -52,7 +53,7 @@ $$
 V(Y_i)=V(E[Y_i|X_i])+E[V(Y_i|X_i)]
 $$
 
-where $ V(\cdot) $ denotes variance and $ V(Y_i|X_i) $ is the conditional variance of $ Y_i $ given $ X_i $.
+where $V(\cdot)$ denotes variance and $V(Y_i|X_i)$ is the conditional variance of $Y_i$ given $X_i$.
 
 ### Linear Regression and the CEF
 
@@ -60,7 +61,7 @@ $$
 \beta_k=\frac{Cov(Y_i,\tilde{x}_{ki})}{V(\tilde{x}_{ki})}
 $$
 
-where $\tilde{x}_{ki}$ is the residual from a regression of $x_{ki} $ on all the other covariates.
+where $\tilde{x}_{ki}$ is the residual from a regression of $x_{ki}$ on all the other covariates.
 
 That is, $E[X_iX_i']E[X_iY_i]^{-1}$ is the $K\times 1$ vector with k-th element $\dfrac{Cov(Y_i,\tilde{x}_{ki})}{V(\tilde{x}_{ki})}$ 
 
@@ -70,11 +71,11 @@ Suppose the CEF is linear. Then the population regression function is it.
 
 **Theorem 3.1.5 The Best Linear Predictor Theorem (Regression-justification II)**
 
-The function $X_i' \beta $ is the best linear predictor of $Y_i$ given $X_i$ in a MMSE sense.
+The function $X_i' \beta$ is the best linear predictor of $Y_i$ given $X_i$ in a MMSE sense.
 
 **Theorem 3.1.6 The Regression-CEF Theorem (Regression-justification III)**
 
-The function $ X_i' \beta $ provides the MMSE linear approximation to $ E[Y_i|X_i] $, that is 
+The function $X_i' \beta$ provides the MMSE linear approximation to $E[Y_i|X_i]$, that is 
 
 $$
 \beta=\mathop{\mathbf{argmin}}\limits_{b}E\{(E[Y_i|X_i]-X_i'b)^2\}
@@ -124,11 +125,11 @@ $$
 Y_i=\beta_0+\beta_1 d_{1i}+\beta_2 d_{2i}+...+\beta_{\tau}d_{\tau i}+\epsilon_i
 $$
 
-where $ d_{ji}=1[s_i=j] $ is a dummy variable indicating schooling level-j, and $ \beta_j $ is said to be the jth-level effect. 
+where $d_{ji}=1[s_i=j]$ is a dummy variable indicating schooling level-j, and $\beta_j$ is said to be the jth-level effect. 
 
-Note that $ \beta_j=E[Y_i|S_i=j]-\beta_j=E[Y_i|S_i=0]$ while $ \beta_0=E[Y_i|S_i=0] $.
+Note that $\beta_j=E[Y_i|S_i=j]-\beta_j=E[Y_i|S_i=0]$ while $\beta_0=E[Y_i|S_i=0]$.
 
-A regression model is saturated as long as it has one parameter for every possible j in $ E[Y_i|S_i=j] $. Saturated models fit the CEF perfectly because the CEF is linear in the dummy regressors used to saturate.
+A regression model is saturated as long as it has one parameter for every possible j in $E[Y_i|S_i=j]$. Saturated models fit the CEF perfectly because the CEF is linear in the dummy regressors used to saturate.
 
 If there are two explanatory variables, say one dummy indicating college graduates and one dummy indicating sex, the model is saturated by including these two dummies, their product, and a constant. The coefficients on the dummies are known as **main effects**, while the product is called an **interaction term**. This is not the only saturated parameterization: any set of indicators (dummies) that can be used to identify each value taken on by the covariates produces a saturated model. 
 
@@ -140,7 +141,7 @@ A regression is causal when the CEF it approximates is causal.
 
 Conditional independence assumption (CIA), also called selection-on-observables because the covariates to be held are assumed to be known and observed.
 
-Consider the *education-income* example. Given the CIA, conditional-on- X_i $ comparisons of average earnings across schooling levels have a causal interpretation. 
+Consider the *education-income* example. Given the CIA, conditional-on- X_i $comparisons of average earnings across schooling levels have a causal interpretation. 
 
 $$
 E[Y_i|X_i,C_i=1]-E[Y_i|X_i,C_i=0]=E[Y_{1i}-Y_{0i}|X_i]
@@ -158,7 +159,7 @@ $$
 Y_{si}\amalg S_i|X_i
 $$
 
-Conditional on $ X_i $, the average causal effect of a one year increase in schooling is $ E[f_i(s)-f_i(s-1)|X_i] $, while the average casual effect of a 4-year increase in schooling is $ E[f_i(s)-E[f_i(s-4)]|X_i] $. Given CIA, conditional-on-$ X_i $ comparisons of average earnings across schooling levels have a causal interpretation.
+Conditional on $X_i$, the average causal effect of a one year increase in schooling is $E[f_i(s)-f_i(s-1)|X_i]$, while the average casual effect of a 4-year increase in schooling is $E[f_i(s)-E[f_i(s-4)]|X_i]$. Given CIA, conditional-on-$X_i$ comparisons of average earnings across schooling levels have a causal interpretation.
 
 $$
 E[Y_i|X_i,S_i=s]-E[Y_i|X_i,S_i=s-1]=E[f_i(s)-f_i(s-1)|X_i]
@@ -166,7 +167,7 @@ $$
 
 The elimination of selection bias.
 
-Regression provides an easy-to-use empirical strategy that automatically turns the CIA into causal effects. Two routes can be traced from the CIA to regression, One assumes that $ f_i(s) $ is both linear in s and the same for everyone except for an additive error term, in which case linear regression is a natural tool to estimate the features of $ f(s) $. A more general but somewhat longer route recognizes that $ f_i(s) $ almost certainly differs for different people. and, moreover, need not be linear in s. Even so. allowing for random variation in $ f_i(s) $ across people, and for non-linearity for a given person, regression can be thought of as strategy for the estimation of a weighted average of the individual-specific difference, $ f_i(s) - f_i(s - 1) $. In fact, regression can be seen as a particular sort of matching estimator, capturing an average causal effect.
+Regression provides an easy-to-use empirical strategy that automatically turns the CIA into causal effects. Two routes can be traced from the CIA to regression, One assumes that $f_i(s)$ is both linear in s and the same for everyone except for an additive error term, in which case linear regression is a natural tool to estimate the features of $f(s)$. A more general but somewhat longer route recognizes that $f_i(s)$ almost certainly differs for different people. and, moreover, need not be linear in s. Even so. allowing for random variation in $f_i(s)$ across people, and for non-linearity for a given person, regression can be thought of as strategy for the estimation of a weighted average of the individual-specific difference, $f_i(s) - f_i(s - 1)$. In fact, regression can be seen as a particular sort of matching estimator, capturing an average causal effect.
 
 The first route, a linear constant-effects causal model. Suppose that 
 
@@ -176,14 +177,13 @@ $$
 
 The equation says that the linearity and the functional relationship of interest is the same for everyone.
 
-Suppose now the CIA holds given a vector if observed covariates, $ X_i  $. We decompose the random part of potential earnings, $ \eta_i $, into a linear function of observable characteristics, $ X_i $, and an error term, $ v_i $: 
+Suppose now the CIA holds given a vector if observed covariates, $X_i $. We decompose the random part of potential earnings, $\eta_i$, into a linear function of observable characteristics, $X_i$, and an error term, $v_i$: 
 
 $$
 \eta_i=X_i'\gamma+v_i
 $$
 
-where $ \gamma $ is a vector of population regression coefficients that is assumed to satisfy $ E[\eta_i|X_i]=X_i'\gamma $
-. Because $ \gamma $ is defined by the regression of $ \eta_i $ on $ X_i $, the residual $ v_i $ and $ X_i $ are uncorrelated by construction. Moreover, by virtue of the CIA, we have 
+where $\gamma$ is a vector of population regression coefficients that is assumed to satisfy $E[\eta_i|X_i]=X_i'\gamma$. Because $\gamma$ is defined by the regression of $\eta_i$ on $X_i$, the residual $v_i$ and $X_i$ are uncorrelated by construction. Moreover, by virtue of the CIA, we have 
 
 $$
 E[f_i(s)|X_i,S_i]=E[f_i(s)|X_i]=\alpha+\rho s+E[\eta_i|X]=\alpha+\rho s+X_i'\gamma
@@ -195,7 +195,7 @@ $$
 Y_i=\alpha+\rho S_i+X_i'\gamma+v_i
 $$
 
-is uncorrelated with the regressors, $ S_i $ and $ X_i $, and the regression coefficient $ \rho $ is the causal effect of interest. It bears emphasizing once again that the key assumption here is that the observable characteristics, $ X_i $, are the only reason why $ \eta_i $ and $ S_i $ (equivalently, $ f_i(s) $ and $ S_i $) are correlated. The \textit{selection-on-observables assumption}.
+is uncorrelated with the regressors, $S_i$ and $X_i$, and the regression coefficient $\rho$ is the causal effect of interest. It bears emphasizing once again that the key assumption here is that the observable characteristics, $X_i$, are the only reason why $\eta_i$ and $S_i$ (equivalently, $f_i(s)$ and $S_i$) are correlated. The \textit{selection-on-observables assumption}.
 
 ### The Omitted Variables Bias Formula
 To paraphrase, the OVB formula says: *Short equals long plus the effect of omitted times the regression of omitted on included*
@@ -209,21 +209,21 @@ The essence of the bad control problem is a version of selection bias, albeit so
 
 A formal illustration of the bad control problem in the college/occupation example (the effects of a college degree on earnings that people can work in one of two occupations, while collar and blue collar. And the occupation is highly correlated with both education and pay, thus is better to look at the effect college on wages within an occupation).
 
-Let $ W_i $ be a dummy variable that denotes white collar workers and $ Y_i $ denote earnings. The realization of these variables is determined by college graduation status and potential outcomes that are indexed against $ C_i $. We have 
+Let $W_i$ be a dummy variable that denotes white collar workers and $Y_i$ denote earnings. The realization of these variables is determined by college graduation status and potential outcomes that are indexed against $C_i$. We have 
 
 $$
     Y_i=C_iY_{1i}+(1-C_i)Y_{0i} \\
     W_i=C_iW_{1i}+(1-C_i)W_{0i} 
 $$
 
-where $ C_i=1 $ for college graduates and is zero otherwise. Assuming that $ C_i $ is randomly assigned, it is independent of all potential outcomes. Thus, the causal effect of $ C_i $ on either $ Y_i $ or $ W_i $ since independence gives:
+where $C_i=1$ for college graduates and is zero otherwise. Assuming that $C_i$ is randomly assigned, it is independent of all potential outcomes. Thus, the causal effect of $C_i$ on either $Y_i$ or $W_i$ since independence gives:
 
 $$
     E[Y_i|C_i=1]- E[Y_i|C_i=0]= E[Y_{1i}-Y_{0i}] \\
     E[W_i|C_i=1]- E[W_i|C_i=0]= E[W_{1i}-W_{0i}]
 $$
 
-Bad control means that a comparison of earnings conditional on $ W_i $ does not have a causal interpretation. 
+Bad control means that a comparison of earnings conditional on $W_i$ does not have a causal interpretation. 
 
 $$
 E[Y_{1i}|W_{1i}=1]-E[Y_{0i}|W_{0i}=1] \\
