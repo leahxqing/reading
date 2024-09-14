@@ -195,7 +195,7 @@ $$
 Y_i=\alpha+\rho S_i+X_i'\gamma+v_i
 $$
 
-is uncorrelated with the regressors, $S_i$ and $X_i$, and the regression coefficient $\rho$ is the causal effect of interest. It bears emphasizing once again that the key assumption here is that the observable characteristics, $X_i$, are the only reason why $\eta_i$ and $S_i$ (equivalently, $f_i(s)$ and $S_i$) are correlated. The \textit{selection-on-observables assumption}.
+is uncorrelated with the regressors, $S_i$ and $X_i$, and the regression coefficient $\rho$ is the causal effect of interest. It bears emphasizing once again that the key assumption here is that the observable characteristics, $X_i$, are the only reason why $\eta_i$ and $S_i$ (equivalently, $f_i(s)$ and $S_i$) are correlated. The *selection-on-observables assumption*.
 
 ### The Omitted Variables Bias Formula
 To paraphrase, the OVB formula says: *Short equals long plus the effect of omitted times the regression of omitted on included*
