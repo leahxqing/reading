@@ -102,7 +102,7 @@ It is derived as a method of moments estimator.
 
 **The Continuous Mapping Theorem:** Probability limits pass through continuous functions.For example, the probability limit of any continuous function of a sample moment is the function evaluated at the corresponding population moment. Formally, the probability limit of $h(bx)$ is $h(b)$ where plim $b_n=b$ and $h(\cdot)$ is continuous at b.
 
-**The Delta Method:** Consider a vector-valued random variable that is asymptotically Normally distributed. Most scalar functions of this random variable are also asymptotically Normally distributed with covariance matrix given by a quadratic form with the covariance matrix of the random variable on the inside and the gradient of the function evaluated at the probability limit of the random variable on the outside. Formally, the asymptotic distribution of $ h(b_n) $ is Normal with covariance matrix $\bigtriangledown h(b)'\bigtriangledown h(b)$ where plim $b_N = b$, $h(\cdot)$ is continuously differentiable at b with gradient $\bigtriangledown h(b)$, and $b_N$ has asymptotic covariance matrix $\Omega$.
+**The Delta Method:** Consider a vector-valued random variable that is asymptotically Normally distributed. Most scalar functions of this random variable are also asymptotically Normally distributed with covariance matrix given by a quadratic form with the covariance matrix of the random variable on the inside and the gradient of the function evaluated at the probability limit of the random variable on the outside. Formally, the asymptotic distribution of $h(b_n)$ is Normal with covariance matrix $\bigtriangledown h(b)'\bigtriangledown h(b)$ where plim $b_N = b$, $h(\cdot)$ is continuously differentiable at b with gradient $\bigtriangledown h(b)$, and $b_N$ has asymptotic covariance matrix $\Omega$.
 
 **The asymptotic distribution of $\hat{\beta}$:**
 
@@ -177,7 +177,7 @@ $$
 
 The equation says that the linearity and the functional relationship of interest is the same for everyone.
 
-Suppose now the CIA holds given a vector if observed covariates, $X_i $. We decompose the random part of potential earnings, $\eta_i$, into a linear function of observable characteristics, $X_i$, and an error term, $v_i$: 
+Suppose now the CIA holds given a vector if observed covariates, $X_i$. We decompose the random part of potential earnings, $\eta_i$, into a linear function of observable characteristics, $X_i$, and an error term, $v_i$: 
 
 $$
 \eta_i=X_i'\gamma+v_i
