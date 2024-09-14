@@ -97,29 +97,29 @@ It is derived as a method of moments estimator.
 **The Central Limit Theorem:** Sample moments are asymptotically Normally distributed (after subtracting the corresponding population moment and multiplying by the square root of the sample size). The covariance matrix given by the variance of the underlying random variable. In other words, in large enough samples, approximately normalized sample moments are approximately Normally distributed.
 
 **Slutsky's Theorem:**
-- Consider the sum of two random variables, one of which converges in distribution and the other converges in probability to a constant: the asymptotic distribution of this sum is unaffected by replacing the one that converges to a constant by this constant. Formally, let $ a_N $ be a statistic with a limiting distribution and let $ b_N $ be a statistic with probability limit b. Then $ a_N +b_N $ and $ a_N+b $ have the same limiting distribution.
-- Consider the product of two random variables, one of which converges in distribution and the other converges in probability to a constant: the asymptotic distribution of this product is unaffected by replacing the one that converges to a constant by this constant. This allows us to replaces some sample moments by population moments (i.e, by their probability limits) when deriving distributions. Formally, let $ a_N $ be a statistic with a limiting distribution and let $ b_N $ be a statistic with probability limit b. Then $ a_Nb_N $ and $ a_N b $ have the same asymptotic distribution.
+- Consider the sum of two random variables, one of which converges in distribution and the other converges in probability to a constant: the asymptotic distribution of this sum is unaffected by replacing the one that converges to a constant by this constant. Formally, let $a_N$ be a statistic with a limiting distribution and let $b_N$ be a statistic with probability limit b. Then $a_N +b_N$ and $a_N+b$ have the same limiting distribution.
+- Consider the product of two random variables, one of which converges in distribution and the other converges in probability to a constant: the asymptotic distribution of this product is unaffected by replacing the one that converges to a constant by this constant. This allows us to replaces some sample moments by population moments (i.e, by their probability limits) when deriving distributions. Formally, let $a_N$ be a statistic with a limiting distribution and let $b_N$ be a statistic with probability limit b. Then $a_Nb_N$ and $a_N b$ have the same asymptotic distribution.
 
-**The Continuous Mapping Theorem:** Probability limits pass through continuous functions.For example, the probability limit of any continuous function of a sample moment is the function evaluated at the corresponding population moment. Formally, the probability limit of $h(bx)$ is $h(b)$ where plim $ b_n=b $ and $ h(\cdot) $ is continuous at b.
+**The Continuous Mapping Theorem:** Probability limits pass through continuous functions.For example, the probability limit of any continuous function of a sample moment is the function evaluated at the corresponding population moment. Formally, the probability limit of $h(bx)$ is $h(b)$ where plim $b_n=b$ and $h(\cdot)$ is continuous at b.
 
-**The Delta Method:** Consider a vector-valued random variable that is asymptotically Normally distributed. Most scalar functions of this random variable are also asymptotically Normally distributed with covariance matrix given by a quadratic form with the covariance matrix of the random variable on the inside and the gradient of the function evaluated at the probability limit of the random variable on the outside. Formally, the asymptotic distribution of $ h(b_n) $ is Normal with covariance matrix $ \bigtriangledown h(b)'\bigtriangledown h(b) $ where plim $ b_N = b $, $ h(\cdot) $ is continuously differentiable at b with gradient $\bigtriangledown h(b) $, and $b_N $ has asymptotic covariance matrix $\Omega$.
+**The Delta Method:** Consider a vector-valued random variable that is asymptotically Normally distributed. Most scalar functions of this random variable are also asymptotically Normally distributed with covariance matrix given by a quadratic form with the covariance matrix of the random variable on the inside and the gradient of the function evaluated at the probability limit of the random variable on the outside. Formally, the asymptotic distribution of $ h(b_n) $ is Normal with covariance matrix $\bigtriangledown h(b)'\bigtriangledown h(b)$ where plim $b_N = b$, $h(\cdot)$ is continuously differentiable at b with gradient $\bigtriangledown h(b)$, and $b_N$ has asymptotic covariance matrix $\Omega$.
 
-**The asymptotic distribution of $ \hat{\beta} $:**
+**The asymptotic distribution of $\hat{\beta}$:**
 
 The first way using **Delta Method**, since \hat{\beta}$ is a function of sample moments, and is therefore asymptotically Normally distributed. 
 
-An easier and more instructive derivation uses the **Slutsky and central limit theorems** shows that $ \hat{\beta} $ has an asymptotically Normal distribution, with probability limit $ \beta $, and covariance matrix 
+An easier and more instructive derivation uses the **Slutsky and central limit theorems** shows that $\hat{\beta}$ has an asymptotically Normal distribution, with probability limit $\beta$, and covariance matrix 
 
 $$
 E[X_iX_i']^{-1}E[X_iX_i'e_i^2]E[X_iX_i']^{-1}
 $$
 
-The standard errors used to construct t-statistics are the square roots of the diagonal elements of this matrix. In practice these standard errors are estimated by substituting sums for expectations, and using the estimated residuals, $ \hat{e}_i=Y_i-X_i'\hat{\beta} $ to form the empirical fourth moment, $ \sum[X_iX_i\hat{e}_i^2]/N $. 
+The standard errors used to construct t-statistics are the square roots of the diagonal elements of this matrix. In practice these standard errors are estimated by substituting sums for expectations, and using the estimated residuals, $\hat{e}_i=Y_i-X_i'\hat{\beta}$ to form the empirical fourth moment, $\sum[X_iX_i\hat{e}_i^2]/N$. 
 
 Asymptotic standard errors computed in this way are known as heteroskedasticity-consistent standard errors, also "robust" standard errors.
 
 ### Saturated Models, Main Effects, and Other Regression Talk
-Saturated regression models are regression models with discrete explanatory variables, where the model includes a separate parameter for all possible values taken on by the explanatory variables. Suppose, for example, that $ S_i=0,1,2,...,\tau $. A saturated model for $ S_i $ is
+Saturated regression models are regression models with discrete explanatory variables, where the model includes a separate parameter for all possible values taken on by the explanatory variables. Suppose, for example, that $S_i=0,1,2,...,\tau$. A saturated model for $S_i$ is
 
 $$
 Y_i=\beta_0+\beta_1 d_{1i}+\beta_2 d_{2i}+...+\beta_{\tau}d_{\tau i}+\epsilon_i
