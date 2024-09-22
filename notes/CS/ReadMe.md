@@ -49,19 +49,21 @@ Reading Note for *Introduction to Computational Science*. <font color=Brown>It's
     \hat{\beta}=\mathbf{argmin}_{\beta}||\mathbf{X}\beta-\mathbf{y}||_2^2+||\beta^p||_2^2
     $$
     
-- $ \beta^p $ denotes the $p$ dimensional vector after regularization
-    - A shrinkage penalty $ (\lambda\sum_{j=1}^p\beta_j^2) $, $ \lambda $ is the hyperparameter
+- $\beta^p$ denotes the $p$ dimensional vector after regularization
+    - A shrinkage penalty $(\lambda\sum_{j=1}^p\beta_j^2)$, $\lambda$ is the hyperparameter
     - the square root of the shrinkage penalty is L2 norm
+    
 - Ridge Regression mainly overcomes the multicollinearity issue of OLS
-    - High correlation: features in $ \mathbb{X} $ are highly correlated (high VIF: Variance Inflation Factor)
+    - High correlation: features in $\mathbb{X}$ are highly correlated (high VIF: Variance Inflation Factor)
+    
     - Analytical solution:
-      
-        $$
+      $$
         \hat{\beta}=(\mathbf{X}^T\mathbf{X}+\lambda\mathbf{I}^p)^{-1}\mathbf{X}^T\mathbf{y}
         $$
     
-- Parameter Tuning — $ \lambda $
+- Parameter Tuning — $\lambda$
     - Ridge Trace
+    
 - Example: Residents’ Welfare
   
     ```python
@@ -86,7 +88,7 @@ $$
 \hat{\beta}=\mathbf{argmin}_{\beta}||\mathbf{X\beta-y}||_2^2+||\beta^p||_2^2
 $$
 
-- $ \lambda\sum_{j=1}^p|\beta_j| $ : L1 norm
+- $\lambda\sum_{j=1}^p|\beta_j|$ : L1 norm
 - Lasso will also induce the shrinkage of the coefficient to be 0. The larger the $\lambda$, the greater effect of shrinkage.
 - The difference between ridge and lasso:
     - The coefficient won't be exactly 0 in ridge while lasso could attain this $\rightarrow$ to get a **Sparse Model**
@@ -105,4 +107,4 @@ $$
 \hat{\beta}=\mathbf{argmin}_{\beta}||\mathbf{X\beta-y}||_2^2+\lambda(1-\alpha)||\beta^p||_2^2+\lambda\alpha||\beta^p||_2^2
 $$
 
-- $ \alpha=0$: rigde，$ \alpha=1 $: lasso
+- $\alpha=0$: rigde，$\alpha=1$: lasso
