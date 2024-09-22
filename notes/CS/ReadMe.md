@@ -59,7 +59,7 @@ Reading Note for *Introduction to Computational Science*. <font color=Brown>It's
     - Analytical solution:
       $$
         \hat{\beta}=(\mathbf{X}^T\mathbf{X}+\lambda\mathbf{I}^p)^{-1}\mathbf{X}^T\mathbf{y}
-        $$
+      $$
     
 - Parameter Tuning — $\lambda$
     - Ridge Trace
@@ -88,7 +88,7 @@ $$
 \hat{\beta}=\mathbf{argmin}_{\beta}||\mathbf{X\beta-y}||_2^2+||\beta^p||_2^2
 $$
 
-- $\lambda\sum_{j=1}^p|\beta_j|$ : L1 norm
+-  $\lambda\sum_{j=1}^p|\beta_j|$: L1 norm
 - Lasso will also induce the shrinkage of the coefficient to be 0. The larger the $\lambda$, the greater effect of shrinkage.
 - The difference between ridge and lasso:
     - The coefficient won't be exactly 0 in ridge while lasso could attain this $\rightarrow$ to get a **Sparse Model**
